@@ -106,7 +106,7 @@ def delete():
   print("\n===============Deployment Delete===================\n")
   cmd = "kubectl delete -f auto-scaling"
   subprocess.call(cmd.split())
-  cmd = "kubectl get deploy nginx-deployment"
+  cmd = "kubectl get deploy nginx"
   try:
     subprocess.check_output(cmd.split())
   except CalledProcessError as e:
